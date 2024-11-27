@@ -1,25 +1,27 @@
-## AWS Amplify Angular.js Starter Template
+# FrontEnd
 
-This repository provides a starter template for creating applications using Angular.js and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
 
-## Overview
+## Development server
 
-This template equips you with a foundational Angular.js application integrated with AWS Amplify, streamlined for scalability and performance. It is ideal for developers looking to jumpstart their project with pre-configured AWS services like Cognito, AppSync, and DynamoDB.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Features
+## Code scaffolding
 
-- **Authentication**: Setup with Amazon Cognito for secure user authentication.
-- **API**: Ready-to-use GraphQL endpoint with AWS AppSync.
-- **Database**: Real-time database powered by Amazon DynamoDB.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Deploying to AWS
+## Build
 
-For detailed instructions on deploying your application, refer to the [deployment section](https://docs.amplify.aws/angular/start/quickstart/#deploy-a-fullstack-app-to-aws) of our documentation.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Security
+## Running unit tests
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## License
+## Running end-to-end tests
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
