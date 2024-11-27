@@ -1,0 +1,155 @@
+<div class="d-flex align-items-center">
+    <button class="btn me-3" (click)="location.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+        </svg>
+    </button>
+    <span class="fs-3">Ride Hub</span>
+</div>
+<div class="flex  mt-3">
+    <button class="btn btn-primary text-white me-5" data-bs-target="#offerCarPoolModal" data-bs-toggle="modal" type="button">
+        Offer carpool
+    </button>
+</div>
+<div class="row p-4">
+    <div class="col-sm-12 col-md-3 p-3">
+        <div class="card">
+            <div class="card-header bg-white">
+                <span class="fs-5">Carpool</span>
+            </div>
+            <div class="card-body">
+                <div class="flex items-center text-gray-700">
+                    By: Raymond
+                </div>
+                <div class="flex items-center text-gray-700">
+                    Meet at: NorthCoast
+                </div>
+
+                <div class="flex items-center text-gray-700">
+                    <svg class="lucide lucide-calendar w-4 h-4 mr-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        <rect height="18" rx="2" width="18" x="3" y="4"></rect>
+                        <path d="M3 10h18"></path>
+                    </svg>
+                    December 15th, 2024
+                </div>
+
+                <div class="flex items-center text-gray-700">
+                    <svg class="lucide lucide-clock w-4 h-4 mr-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    1:30 PM (+-30 mins)
+                </div>
+
+
+                <div class="flex items-center text-gray-700">
+                    <svg class="lucide lucide-map-pin w-4 h-4 mr-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    North Tech
+                </div>
+                <div class="flex items-center text-gray-700">
+                    <svg class="lucide lucide-users w-4 h-4 mr-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Available Slots: 0/3
+                </div>
+                <button class="btn btn-primary text-white my-3 w-100">Join</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal" id="offerCarPoolModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="fs-5">Offer to car pool</span>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-column text-gray-700 mb-4">
+                    <div>
+                    Meet at:
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <input autocomplete="off" class="btn-check" id="btn-check-1" name="meetAt" type="radio">
+                        <label class="btn " for="btn-check-1">NorthCoast</label>
+
+                        <input autocomplete="off" class="btn-check" id="btn-check-2" name="meetAt" type="radio">
+                        <label class="btn " for="btn-check-2">NorthTech</label>
+
+                        <input autocomplete="off" class="btn-check" id="btn-check-3" name="meetAt" type="radio">
+                        <label class="btn " for="btn-check-3">Biopolis</label>
+
+                        <input autocomplete="off" class="btn-check" id="btn-check-4" name="meetAt" type="radio">
+                        <label class="btn " for="btn-check-4">Other</label>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column text-gray-700 mb-4">
+                    <div>
+                        Date:
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" [(ngModel)]="dateString">
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column text-gray-700 mb-4">
+                    <div>
+                        Time:
+                    </div>
+                    <div class="input-group">
+                        <input [(ngModel)]="timeString" type="text" class="form-control" placeholder="Time" aria-label="Time">
+                        <span class="input-group-text">+-</span>
+                        <input [(ngModel)]="flexibility" type="text" class="form-control" placeholder="minutes" aria-label="flexibility">
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column text-gray-700 mb-4">
+                    <div>
+                        Destination:
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <input autocomplete="off" class="btn-check" id="btn-check-d1" name="destination" type="radio">
+                        <label class="btn " for="btn-check-d1">NorthCoast</label>
+
+                        <input autocomplete="off" class="btn-check" id="btn-check-d2" name="destination" type="radio">
+                        <label class="btn " for="btn-check-d2">NorthTech</label>
+
+                        <input autocomplete="off" class="btn-check" id="btn-check-d3" name="destination" type="radio">
+                        <label class="btn " for="btn-check-d3">Biopolis</label>
+
+                        <input autocomplete="off" class="btn-check" id="btn-check-d4" name="destination" type="radio">
+                        <label class="btn " for="btn-check-d4">Other</label>
+                    </div>
+                </div>
+                <div class="d-flex flex-column text-gray-700 mb-4">
+                    <div class="input-group mb-4">
+                        <label class="input-group-text" for="inputGroupSelect01">Available Slots:</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option selected value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn border" data-bs-dismiss="modal" type="button">Close</button>
+                <button class="btn btn-primary text-white" type="button">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,8 @@
-img.app{
-  width: 125px;
+.text-bg-primary{
+  background-color: #f9a31e!important;
+  color: white!important;
+}
+
+#router-outlet{
+  min-height: 100vh;
 }

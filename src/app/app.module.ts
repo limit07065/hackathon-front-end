@@ -9,13 +9,15 @@ import { BondHubComponent } from './bond-hub/bond-hub.component';
 import { ExpertComponent } from './expert/expert.component';
 import { FormsModule } from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from "./home/home.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         CarPoolComponent,
         BondHubComponent,
-        ExpertComponent
+        ExpertComponent,
+        HomeComponent
     ],
     imports: [
         BrowserModule,
