@@ -6,16 +6,16 @@
     <button class="btn btn-link text-white me-3" type="button">Login</button>
 </header>
 
-<div class="d-flex justify-content-md-center p-3">
+<div class="d-flex justify-content-around p-3">
     <div>
-        <button><img class="img-thumbnail me-3" src="assets/ridehub-icon.png"></button>
+        <button (click)="router.navigate(['car-pool'])"><img class="app" src="assets/ridehub-icon.png"></button>
     </div>
     <div>
-        <button><img class="img-thumbnail me-3" src="assets/experthub-icon.png"></button>
+        <button (click)="router.navigate(['expert'])"><img class="app" src="assets/experthub-icon.png"></button>
     </div>
     <div>
-        <button><img class="img-thumbnail " src="assets/bondhub-icon.png"></button>
+        <button (click)="router.navigate(['bond'])"><img class="app" src="assets/bondhub-icon.png"></button>
     </div>
 </div>
 <hr class="mx-3">
-<router-outlet></router-outlet>
+<router-outlet class="my-3"></router-outlet>
