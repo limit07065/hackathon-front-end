@@ -28,6 +28,14 @@ export class ExpertComponent {
             return;
         }
         this.conversation.push({type: 'q', content: this.question});
+
+        if (!window.location.host.startsWith('localhost')) {
+            let ans = "Sorry, this feature is not available for live demo.";
+            this.conversation.push({type: 'a', content: ans});
+            this.question = "";
+            return;
+        }
+
         this.wait = true;
         this.askService.ask(this.question).subscribe({
             next: (res: any) => {
@@ -42,6 +50,10 @@ export class ExpertComponent {
                     let ans = 'Sorry, I may not understand your question correctly or there are no experts that I know of for your question.';
                     this.conversation.push({type: 'a', content: ans});
                 }
+            },
+            error: _ =>{
+                let ans = "Sorry, there's an exception while looking for answer";
+                this.conversation.push({type: 'a', content: ans});
             }
             ,
             complete: () => {
