@@ -5,3 +5,21 @@
     height: 100px;
   }
 }
+
+.chat-question{
+  padding: 12px;
+  background: #4154DF;
+  float: right;
+  border-radius: 20px;
+  min-width: 50px;
+  color: white;
+}
+
+.chat-answer{
+  padding: 12px;
+  background: white;
+  border-radius: 20px;
+  border: solid 1px #9D9B9BFF;
+  min-width: 50px;
+  margin: auto 12px;
+}
