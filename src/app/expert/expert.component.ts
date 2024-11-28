@@ -35,7 +35,7 @@ export class ExpertComponent {
                     let ans = 'You might be looking for:';
                     this.conversation.push({type: 'a', content: ans});
                     for (let i = 0; i < res.matches.length; i++) {
-                        ans = res.matches[i]['name'] + ' from ' + res.matches[i]['area'] + '. Because of their keywords: ' + res.matches[i]['keywords'];
+                        ans = res.matches[i]['name'] + ' from ' + res.matches[i]['area'] + '.';
                         this.conversation.push({type: 'a', content: ans});
                     }
                 } else {
