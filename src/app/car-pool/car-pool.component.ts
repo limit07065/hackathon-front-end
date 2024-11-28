@@ -35,32 +35,45 @@ export class CarPoolComponent {
     }
 
     save() {
-        this.newPost.id = this.id;
-        this.id++;
 
         // process date
-        let datePart = this.dateString.split('/');
-        this.newPost.date = new Date();
-        let month = +datePart[1] != 0 ? datePart[1] - 1 : 0;
-        this.newPost.date.setFullYear(datePart[2], month, datePart[0]);
-
-        // process minutes
-        let hour: number = +this.timeString.split(':')[0];
-        let minutes: number = +this.timeString.split(':')[1].split(' ')[0];
-        let past12: boolean = this.timeString.split(':')[1].split(' ')[1].trim() == 'PM';
-        if (past12){
-            hour += 12;
+        try {
+            let datePart = this.dateString.split('/');
+            this.newPost.date = new Date();
+            let month = +datePart[1] != 0 ? datePart[1] - 1 : 0;
+            this.newPost.date.setFullYear(datePart[2], month, datePart[0]);
+        } catch (e) {
+            return;
         }
 
-        this.newPost.time = new Date(this.newPost.date.getTime());
-        this.newPost.time.setHours(hour);
-        this.newPost.time.setMinutes(minutes);
+        try {
+            // process minutes
+            let hour: number = +this.timeString.split(':')[0];
+            let minutes: number = +this.timeString.split(':')[1].split(' ')[0];
+            let past12: boolean = this.timeString.split(':')[1].split(' ')[1].trim() == 'PM';
+            if (past12) {
+                hour += 12;
+            }
+
+            this.newPost.time = new Date(this.newPost.date.getTime());
+            this.newPost.time.setHours(hour);
+            this.newPost.time.setMinutes(minutes);
+        } catch (e) {
+            return;
+        }
 
         this.newPost.name = "User";
         if (!this.newPost.flexibility) {
             this.newPost.flexibility = 0;
         }
+        if (!this.newPost.totalSlots){
+            return;
+        }
+
         this.newPost.occupiedSlots = 0;
+
+        this.newPost.id = this.id;
+        this.id++;
         this.posts.push(this.newPost);
         this.newPost = {};
     }
