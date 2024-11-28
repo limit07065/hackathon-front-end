@@ -31,7 +31,7 @@ export class CarPoolComponent {
         this.id++;
         this.posts.push(post);
         this.joined = [];
-        this.newPost = {};
+        this.newPost = {totalSlots: 3};
     }
 
     save() {
@@ -66,7 +66,7 @@ export class CarPoolComponent {
         if (!this.newPost.flexibility) {
             this.newPost.flexibility = 0;
         }
-        if (!this.newPost.totalSlots){
+        if (!this.newPost.totalSlots) {
             return;
         }
 
@@ -75,7 +75,7 @@ export class CarPoolComponent {
         this.newPost.id = this.id;
         this.id++;
         this.posts.push(this.newPost);
-        this.newPost = {};
+        this.newPost = {totalSlots: 3};
     }
 
     join(id: number) {

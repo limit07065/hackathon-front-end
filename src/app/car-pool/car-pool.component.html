@@ -82,16 +82,16 @@
                         Meet at:
                     </div>
                     <div class="d-flex justify-content-around">
-                        <input autocomplete="off" class="btn-check" id="btn-check-1" name="meetAt" type="radio" (click)="newPost.meetAt = 'North Coast'">
+                        <input autocomplete="off" class="btn-check" id="btn-check-1" name="meetAt" type="radio" [checked]="newPost.meetAt == 'North Coast'" (click)="newPost.meetAt = 'North Coast'">
                         <label class="btn " for="btn-check-1">North Coast</label>
 
-                        <input autocomplete="off" class="btn-check" id="btn-check-2" name="meetAt" type="radio" (click)="newPost.meetAt = 'North Tech'">
+                        <input autocomplete="off" class="btn-check" id="btn-check-2" name="meetAt" type="radio" [checked]="newPost.meetAt == 'North Tech'" (click)="newPost.meetAt = 'North Tech'">
                         <label class="btn " for="btn-check-2">North Tech</label>
 
-                        <input autocomplete="off" class="btn-check" id="btn-check-3" name="meetAt" type="radio" (click)="newPost.meetAt = 'Biopolis'">
+                        <input autocomplete="off" class="btn-check" id="btn-check-3" name="meetAt" type="radio" [checked]="newPost.meetAt == 'Biopolis'" (click)="newPost.meetAt = 'Biopolis'">
                         <label class="btn " for="btn-check-3">Biopolis</label>
 
-                        <input autocomplete="off" class="btn-check" id="btn-check-4" name="meetAt" type="radio" (click)="newPost.meetAt = 'Other'">
+                        <input autocomplete="off" class="btn-check" id="btn-check-4" name="meetAt" type="radio" [checked]="newPost.meetAt == 'Other'" (click)="newPost.meetAt = 'Other'">
                         <label class="btn " for="btn-check-4">Other</label>
                     </div>
                 </div>
@@ -121,16 +121,16 @@
                         Destination:
                     </div>
                     <div class="d-flex justify-content-around">
-                        <input autocomplete="off" class="btn-check" id="btn-check-d1" name="destination" type="radio" (click)="newPost.destination = 'North Coast'">
+                        <input autocomplete="off" class="btn-check" id="btn-check-d1" name="destination" type="radio" [checked]="newPost.destination == 'North Coast'" (click)="newPost.destination = 'North Coast'">
                         <label class="btn " for="btn-check-d1">North Coast</label>
 
-                        <input autocomplete="off" class="btn-check" id="btn-check-d2" name="destination" type="radio" (click)="newPost.destination = 'North Tech'">
+                        <input autocomplete="off" class="btn-check" id="btn-check-d2" name="destination" type="radio" [checked]="newPost.destination == 'North Tech'" (click)="newPost.destination = 'North Tech'">
                         <label class="btn " for="btn-check-d2">North Tech</label>
 
-                        <input autocomplete="off" class="btn-check" id="btn-check-d3" name="destination" type="radio" (click)="newPost.destination = 'Biopolis'">
+                        <input autocomplete="off" class="btn-check" id="btn-check-d3" name="destination" type="radio" [checked]="newPost.destination == 'Biopolis'" (click)="newPost.destination = 'Biopolis'">
                         <label class="btn " for="btn-check-d3">Biopolis</label>
 
-                        <input autocomplete="off" class="btn-check" id="btn-check-d4" name="destination" type="radio" (click)="newPost.destination = 'Other'">
+                        <input autocomplete="off" class="btn-check" id="btn-check-d4" name="destination" type="radio" [checked]="newPost.destination == 'Other'" (click)="newPost.destination = 'Other'">
                         <label class="btn " for="btn-check-d4">Other</label>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                         <select class="form-select" id="inputGroupSelect01" [(ngModel)]="newPost.totalSlots">
                             <option value="1">1</option>
                             <option value="2">2</option>
-                            <option selected value="3">3</option>
+                            <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
                             <option value="6">6</option>
