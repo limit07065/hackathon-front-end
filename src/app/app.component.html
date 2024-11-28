@@ -1,11 +1,11 @@
 <!-- Toolbar -->
-<header class="text-bg-primary bg-gradient d-flex flex-row justify-content-between py-1 px-1">
-    <div class="align-middle align-self-center ms-3 fs-3">
+<header class="text-bg-primary bg-gradient d-flex flex-row justify-content-between pt-3 px-1">
+    <div class="align-middle align-self-center ms-3 fs-3 fw-bold" (click)="router.navigate([''])">
         MeeSeek
     </div>
-    <button class="btn btn-link text-white me-3" type="button">Login</button>
+    <button class="btn btn-light me-3 w-25" id="login" type="button"><b>Login</b></button>
 </header>
-<div id="router-outlet" class="p-3 text-bg-light bg-gradient">
+<div id="router-outlet" class=" text-bg-light bg-gradient">
     <router-outlet class=""></router-outlet>
 </div>
 

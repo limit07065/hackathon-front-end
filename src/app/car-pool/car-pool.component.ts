@@ -23,4 +23,8 @@ export class CarPoolComponent {
         this.timeString = datePipe.transform(nextHour, 'h:mm aa');
     }
 
+    save(){
+        console.log('saved');
+    }
+
 }

@@ -10,6 +10,7 @@ import { ExpertComponent } from './expert/expert.component';
 import { FormsModule } from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from "./home/home.component";
+import { HttpClient, provideHttpClient } from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -26,7 +27,7 @@ import { HomeComponent } from "./home/home.component";
         FormsModule,
         NgbModule,
     ],
-    providers: [],
+    providers: [provideHttpClient()],
     bootstrap: [AppComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

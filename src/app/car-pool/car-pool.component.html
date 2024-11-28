@@ -1,18 +1,23 @@
-<div class="d-flex align-items-center">
-    <button class="btn me-3" (click)="location.back()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+<div class="d-flex align-items-center text-bg-primary-gradient px-3 py-3">
+    <button (click)="location.back()" class="btn">
+        <svg class="bi bi-arrow-left" fill="currentColor" height="25" viewBox="0 0 16 16" width="25" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" fill-rule="evenodd"/>
         </svg>
     </button>
-    <span class="fs-3">Ride Hub</span>
+    <span class="fs-3 fw-bold w-75">Looking to carpool?</span>
 </div>
-<div class="flex  mt-3">
-    <button class="btn btn-primary text-white me-5" data-bs-target="#offerCarPoolModal" data-bs-toggle="modal" type="button">
+<div class="flex px-3 mt-3">
+    <button class="btn btn-outline-primary me-5 w-50" data-bs-target="#offerCarPoolModal" data-bs-toggle="modal" type="button">
         Offer carpool
+        <span class="float-right">
+            <svg class="bi bi-arrow-right" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" fill-rule="evenodd"/>
+            </svg>
+            </span>
     </button>
 </div>
 <div class="row p-4">
-    <div class="col-sm-12 col-md-3 p-3">
+    <div class="col-sm-12 col-md-4 p-3">
         <div class="card">
             <div class="card-header bg-white">
                 <span class="fs-5">Carpool</span>
@@ -77,7 +82,7 @@
             <div class="modal-body">
                 <div class="d-flex flex-column text-gray-700 mb-4">
                     <div>
-                    Meet at:
+                        Meet at:
                     </div>
                     <div class="d-flex justify-content-around">
                         <input autocomplete="off" class="btn-check" id="btn-check-1" name="meetAt" type="radio">
@@ -99,7 +104,7 @@
                         Date:
                     </div>
                     <div>
-                        <input class="form-control" type="text" [(ngModel)]="dateString">
+                        <input [(ngModel)]="dateString" class="form-control" type="text">
                     </div>
                 </div>
 
@@ -108,9 +113,9 @@
                         Time:
                     </div>
                     <div class="input-group">
-                        <input [(ngModel)]="timeString" type="text" class="form-control" placeholder="Time" aria-label="Time">
+                        <input [(ngModel)]="timeString" aria-label="Time" class="form-control" placeholder="Time" type="text">
                         <span class="input-group-text">+-</span>
-                        <input [(ngModel)]="flexibility" type="text" class="form-control" placeholder="minutes" aria-label="flexibility">
+                        <input [(ngModel)]="flexibility" aria-label="flexibility" class="form-control" placeholder="minutes" type="text">
                     </div>
                 </div>
 
@@ -148,7 +153,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn border" data-bs-dismiss="modal" type="button">Close</button>
-                <button class="btn btn-primary text-white" type="button">Save</button>
+                <button (click)="save()" class="btn btn-primary text-white" data-bs-dismiss="modal" type="button">Save</button>
             </div>
         </div>
     </div>
