@@ -10,8 +10,8 @@ import { ExpertComponent } from './expert/expert.component';
 import { FormsModule } from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from "./home/home.component";
-import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient } from "@angular/common/http";
-import { TimeoutInterceptor } from "./core/timeout-interceptor.";
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptorsFromDi } from "@angular/common/http";
+import { TimeoutInterceptor } from "./core/timeout-interceptor";
 
 @NgModule({
     declarations: [
@@ -29,7 +29,7 @@ import { TimeoutInterceptor } from "./core/timeout-interceptor.";
         NgbModule,
     ],
     providers: [
-        provideHttpClient(),
+        provideHttpClient(withInterceptorsFromDi()),
         {provide: HTTP_INTERCEPTORS, useClass: TimeoutInterceptor, multi: true}
     ],
     bootstrap: [AppComponent],

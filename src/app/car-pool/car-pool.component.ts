@@ -62,6 +62,10 @@ export class CarPoolComponent {
             return;
         }
 
+        if (!this.newPost.destination || !this.newPost.meetAt){
+            return;
+        }
+
         this.newPost.name = "User";
         if (!this.newPost.flexibility) {
             this.newPost.flexibility = 0;

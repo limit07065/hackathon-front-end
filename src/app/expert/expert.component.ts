@@ -54,6 +54,8 @@ export class ExpertComponent {
             error: _ =>{
                 let ans = "Sorry, there's an exception while looking for answer";
                 this.conversation.push({type: 'a', content: ans});
+                this.question = "";
+                this.wait = false;
             }
             ,
             complete: () => {
