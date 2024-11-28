@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'MeeSeek';
+  title = 'MeSeek';
 
   router: Router = inject(Router);
 
