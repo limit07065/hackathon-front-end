@@ -1,12 +1,19 @@
 <!-- Toolbar -->
 <header class="text-bg-primary bg-gradient d-flex flex-row justify-content-between pt-3 px-1">
-    <div class="align-middle align-self-center ms-3 fs-3 fw-bold" (click)="router.navigate([''])">
+    <div (click)="router.navigate([''])" class="align-middle align-self-center ms-3 fs-3 fw-bold">
         MeSeek
     </div>
-    <button class="btn btn-light me-3 w-25" id="login" type="button"><b>Login</b></button>
+    <div *ngIf="!loginResponse?.isAuthenticated">
+        <button (click)="login()" class="btn btn-light me-3" id="login" type="button"><b>Login</b></button>
+    </div>
+
+    <div *ngIf="loginResponse?.isAuthenticated" class="d-flex">
+        <div class="align-middle align-self-center fs-4 px-2">{{loginResponse?.userData?.given_name}} {{loginResponse?.userData?.family_name}}</div>
+        <button (click)="logout()"  class="btn btn-light me-3" id="login" type="button"><b>Logout</b></button>
+    </div>
 </header>
 <app-home></app-home>
-<div id="router-outlet" class=" text-bg-light bg-gradient">
+<div class=" text-bg-light bg-gradient" id="router-outlet">
     <router-outlet class=""></router-outlet>
 </div>
 

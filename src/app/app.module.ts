@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from "./home/home.component";
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptorsFromDi } from "@angular/common/http";
 import { TimeoutInterceptor } from "./core/timeout-interceptor";
+import { AuthConfigModule } from "./core/auth-config-module";
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import { TimeoutInterceptor } from "./core/timeout-interceptor";
         BrowserAnimationsModule,
         FormsModule,
         NgbModule,
+        AuthConfigModule
     ],
     providers: [
         provideHttpClient(withInterceptorsFromDi()),
